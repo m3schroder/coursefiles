@@ -1,0 +1,5 @@
+4 4
+OOOX
+XOEX
+XOOX
+XXOO
