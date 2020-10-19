@@ -1,0 +1,22 @@
+AI
+-----------------
+I took this intro to AI class in the Fall of 2020. Although it was an introduction course, I found many of the things we learned to be very practical.
+We went over topics such as optimization algorithms, supervised learning, and unsupervised learning.
+
+
+Algorithms
+-----------------
+This course was a more advanced continuation of my previous c++ courses. We spent time studying more advanced algorithms and data structures; some of which we had heard of before 
+but had not gotten any practical experience with. We discussed algorithm analysis, hash tables, trees, search algorithms, inheritance, and other similar topics.
+
+Assembly
+-----------------
+Although the folder is titled assembly, this class was technically called "Assembly and Organization". Here we spent 90% of our time working with a program called Logisim
+to create breadboard like circuits. All of these components were eventually pieced together to create a relatively simple computer. The assembly code here was what we ran with
+our RSC's. 
+
+Discrete
+-----------------
+I took this course at the same time as my Algorithms and Data structures course. This class just ended up mirroring many of the topics learned in ADS but with a more conceptual, 
+mathematical approach. We covered additional topics such as matrix algebra and Turing tests.
+
