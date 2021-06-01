@@ -20,3 +20,8 @@ Discrete
 I took this course at the same time as my Algorithms and Data structures course. This class just ended up mirroring many of the topics learned in ADS but with a more 
 conceptual, mathematical approach. We covered additional topics such as matrix algebra and Turing tests.
 
+Neural Networks
+-----------------
+Even though this course was technically an introduction to neural networks we really spent most of out time working practically with networks. The semester long project
+can be found under the organization tab but to summarize, we built a CNN that was made using images gathered with a selenium web scraper. The dataset was small but the 
+model had up to a 87% accuracy on new images.
