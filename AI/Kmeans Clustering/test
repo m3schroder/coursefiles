@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat iris-data.txt | ./split.bash 10 ./kmeans.py 0 8

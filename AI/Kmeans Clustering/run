@@ -1,0 +1,26 @@
+#!/bin/bash
+rm results/iris-*.txt
+rm results/cancer-*.txt
+
+irislines=$(expr $(wc -l < "iris-data.txt") - 10)
+cancerlines=$(expr $(wc -l < "cancer-data.txt") - 10)
+
+for k in $(seq $irislines)
+do 
+	for ((x=0;x<100;x++))
+	do
+			echo "cat iris-data.txt | ./split.bash 10 ./kmeans.py 0 $k >> results/iris-results-$k.txt"
+	done 
+done | xargs -L 1 -I CMD -P 64 bash -c CMD
+
+ls -v results/iris-*.txt | xargs paste > results/results-iris.txt
+
+for k in $(seq $cancerlines)
+do 
+	for ((x=0;x<100;x++))
+	do
+			echo "cat cancer-data.txt | ./split.bash 10 ./kmeans.py 0 $k >> results/cancer-results-$k.txt"
+	done 
+done | xargs -L 1 -I CMD -P 64 bash -c CMD
+
+ls -v results/cancer-*.txt | xargs paste > results/results-cancer.txt

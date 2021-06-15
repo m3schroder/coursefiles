@@ -1,0 +1,23 @@
+#!/bin/bash
+rm results/iris-*.txt
+rm results/cancer-*.txt
+
+for test_set in 1 5 10 25 50 75 100 125 140 145 149
+do 
+	for ((x=0;x<100;x++))
+	do
+			echo "cat iris-data.txt | ./split.bash $test_set ./id3.py >> results/iris-results-$test_set.txt"
+	done 
+done | xargs -L 1 -I CMD -P 64 bash -c CMD
+
+ls -v results/iris-*.txt | xargs paste > results/results-iris.txt
+
+for test_set in 1 5 10 25 50 75 90 100 104
+do 
+	for ((x=0;x<100;x++))
+	do
+			echo "cat cancer-data.txt | ./split.bash $test_set ./id3.py >> results/cancer-results-$test_set.txt"
+	done 
+done | xargs -L 1 -I CMD -P 64 bash -c CMD
+
+ls -v results/cancer-*.txt | xargs paste > results/results-cancer.txt
